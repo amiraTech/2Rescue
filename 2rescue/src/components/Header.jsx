@@ -1,14 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Header.css'; // We'll create this for styling
+import './Header.css';
 
 function Header() {
   return (
     <header>
       <div className="container">
-        <div className="logo">
-          <NavLink to="/">🌐 2Rescue</NavLink>
-        </div>
+        <NavLink to="/" className="logo">🌐 2Rescue</NavLink>
         <nav>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>

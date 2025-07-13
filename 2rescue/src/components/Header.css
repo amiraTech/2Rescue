@@ -1,0 +1,48 @@
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 0;
+  border-bottom: #e74c3c 3px solid;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Style for the active link */
+header nav a.active {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+header nav a:hover {
+    color: #f39c12;
+}
