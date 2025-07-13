@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import RequestHelpPage from './pages/RequestHelpPage';
 import ContactsPage from './pages/ContactsPage';
 import AlertsPage from './pages/AlertsPage';
-import SheltersPage from './pages/SheltersPage';
+import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/request" element={<RequestHelpPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/alerts" element={<AlertsPage />} />
-          <Route path="/shelters" element={<SheltersPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
         </Routes>
       </main>
       <Footer />

@@ -30,25 +30,26 @@ function AlertsPage() {
 
   useEffect(() => {
     // In a real app, you'd fetch this data from an API.
-    // For the MVP, we just set it from our mock data.
     setAlerts(mockAlerts);
   }, []);
 
   return (
-    <div className="page-container">
-      <h1>Latest Disaster Alerts (UK)</h1>
-      <div id="alerts-feed">
-        {alerts.length > 0 ? (
-          alerts.map(alert => (
-            <div key={alert.id} className="alert-item">
-              <h3>⚠️ {alert.type} - {alert.location}</h3>
-              <p className="alert-date">{alert.date}</p>
-              <p>{alert.description}</p>
-            </div>
-          ))
-        ) : (
-          <p>No current alerts.</p>
-        )}
+    <div className="content-wrapper">
+      <div className="page-container">
+        <h1>Latest Disaster Alerts (UK)</h1>
+        <div id="alerts-feed">
+          {alerts.length > 0 ? (
+            alerts.map(alert => (
+              <div key={alert.id} className="alert-item">
+                <h3>⚠️ {alert.type} - {alert.location}</h3>
+                <p className="alert-date">{alert.date}</p>
+                <p>{alert.description}</p>
+              </div>
+            ))
+          ) : (
+            <p>No current alerts.</p>
+          )}
+        </div>
       </div>
     </div>
   );
