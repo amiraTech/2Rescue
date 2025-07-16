@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function HomePage() {
+function HomePage({ alerts }) {
   // Wrap all the page's content in a div with the new class
   return (
     <div className="content-wrapper"> 
+
+    {alerts && alerts.length > 0 && (
+        <section className="alert-banner">
+          ⚠️ Latest Alert: {alerts[0].headline}
+        </section>
+      )}
 
       <div className="hero">
         <h1>Welcome to 2Rescue</h1>

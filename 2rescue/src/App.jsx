@@ -43,12 +43,12 @@ function App() {
       <Header />
       <main className="container">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/request" element={<RequestHelpPage />} />
-          <Route path="/contacts" element={<ContactsPage />} />
-          <Route path="/alerts" element={<AlertsPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-        </Routes>
+            <Route path="/" element={<HomePage alerts={alerts} />} />
+            <Route path="/request" element={<RequestHelpPage />} />
+            <Route path="/contacts" element={<ContactsPage />} />
+            <Route path="/alerts" element={<AlertsPage alerts={alerts} loading={loading} />} />
+            <Route path="/resources" element={<ResourcesPage />} />
+          </Routes>
       </main>
       <Footer />
     </BrowserRouter>
