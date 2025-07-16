@@ -5,11 +5,7 @@ function HomePage() {
   // Wrap all the page's content in a div with the new class
   return (
     <div className="content-wrapper"> 
-    
-      <section className="alert-banner">
-        ⚠️ Latest Alert: (Example) Flash Flood Warning in Manchester.
-      </section>
-      
+
       <div className="hero">
         <h1>Welcome to 2Rescue</h1>
         <p>Your trusted emergency aid tool during critical times.</p>
