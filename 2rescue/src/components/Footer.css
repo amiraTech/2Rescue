@@ -2,6 +2,10 @@ footer {
   background: #0b0f0b;;
   color: whitesmoke;
   text-align: center;
-  margin-bottom: 40px;
-
+  padding: 1rem 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 15vh;
+  justify-content: center;
 }
