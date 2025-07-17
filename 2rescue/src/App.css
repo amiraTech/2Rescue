@@ -45,12 +45,12 @@ body {
   transition: background-color 0.3s ease;
 }
 .btn-primary:hover {
-  background: #176c17;
+  background: #0e3f0e;
 }
 
 .btn-secondary {
   display: inline-block;
-  background: #3498db;
+  background: #1a761a;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -127,7 +127,7 @@ form input, form textarea, form select {
   border-left: 5px solid #32CD32;
 }
 .contact-item h2 {
-  color: green;
+  color: #32CD32;
   margin-top: 0;
 }
 
