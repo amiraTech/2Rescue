@@ -20,9 +20,9 @@ function HomePage({ alerts }) {
 
       <div className="features">
         <div className="feature-item">
-            <h3>🌍 Connect to Local Shelters</h3>
-            <p>Find safe locations and temporary housing near you.</p>
-            <Link to="/shelters">Find Shelters</Link>
+            <h3>📚 Find Help & Resources</h3>
+            <p>Access key charities and official UK guidance during a crisis.</p>
+            <Link to="/resources">View Resources</Link>
         </div>
         <div className="feature-item">
             <h3>🆘 Request Help</h3>
