@@ -23,7 +23,7 @@ body {
 
 /* Page container for consistent spacing */
 .page-container {
-  background: #212122;
+  background: #0b0f0b;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -120,7 +120,7 @@ form input, form textarea, form select {
 
 /* Contacts Page */
 .contact-item {
-  background: #0b0f0b;
+  background: #242722;
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 5px;
