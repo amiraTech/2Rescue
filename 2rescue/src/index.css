@@ -13,14 +13,14 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   background-color: #f4f7f6;
-  color: #333;
+  color: white;
   line-height: 1.6;
 }
 
 /* Set the heading font to Poppins */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
+  color: #32CD32;
   margin-bottom: 1rem;
 }
 
