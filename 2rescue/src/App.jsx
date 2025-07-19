@@ -24,13 +24,13 @@ function App() {
     }
 
     const fetchAlerts = async () => {
-      const apiUrl = `http://api.weatherapi.com/v1/alerts.json?key=${apiKey}&q=London`;
+      const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=1&aqi=no&alerts=yes`;
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
         setAlerts(data.alerts.alert || []);
       } catch (error) {
-        console.error("Failed to fetch alerts:", error);
+        console.error("Failed to fetch forecast alerts:", error);
       } finally {
         setLoading(false);
       }
