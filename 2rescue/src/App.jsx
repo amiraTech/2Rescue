@@ -11,8 +11,8 @@ import AlertsPage from './pages/AlertsPage';
 import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
-
   const [alerts, setAlerts] = useState([]);
+  const [forecast, setForecast] = useState(null); 
   const [loading, setLoading] = useState(true);
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -23,34 +23,41 @@ function App() {
       return; 
     }
 
-    const fetchAlerts = async () => {
-      const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=1&aqi=no&alerts=yes`;
+    const fetchData = async () => {
+      // The URL show the 5-day weather forecast
+      const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=5&aqi=no&alerts=yes`;
+      
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
+        
         setAlerts(data.alerts.alert || []);
+        setForecast(data.forecast); 
+
       } catch (error) {
-        console.error("Failed to fetch forecast alerts:", error);
+        console.error("Failed to fetch data:", error);
       } finally {
         setLoading(false);
       }
     };
-    fetchAlerts();
+    fetchData();
   }, [apiKey]);
 
   return (
     <BrowserRouter>
-      <Header />
-      <main className="container">
-        <Routes>
+      <div className="app-container">
+        <Header />
+        <main>
+          <Routes>
             <Route path="/" element={<HomePage alerts={alerts} />} />
             <Route path="/request" element={<RequestHelpPage />} />
             <Route path="/contacts" element={<ContactsPage />} />
-            <Route path="/alerts" element={<AlertsPage alerts={alerts} loading={loading} />} />
+            <Route path="/alerts" element={<AlertsPage alerts={alerts} forecast={forecast} loading={loading} />} />
             <Route path="/resources" element={<ResourcesPage />} />
           </Routes>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
