@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// Accept 'alerts', 'forecast', and 'loading' as props
 function AlertsPage({ alerts, forecast, loading }) {
 
   if (loading) {

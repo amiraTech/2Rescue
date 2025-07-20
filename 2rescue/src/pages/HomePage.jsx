@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function HomePage({ alerts }) {
-  // Wrap all the page's content in a div with the new class
   return (
     <div className="content-wrapper"> 
 
