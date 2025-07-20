@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer>
       <div className="container">
-        <p>© 2025 2Rescue Project | Built with React</p>
+        <p>© 2025 2Rescue Project | Built by Amira</p>
       </div>
     </footer>
   );
