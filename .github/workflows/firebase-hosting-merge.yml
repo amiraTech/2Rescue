@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RESCUE_6250B }}
           channelId: live
           projectId: rescue-6250b
+          entryPoint: ./2rescue
