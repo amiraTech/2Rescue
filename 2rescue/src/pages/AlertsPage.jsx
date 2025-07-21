@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function AlertsPage({ alerts, forecast, loading }) {
 
@@ -10,6 +10,13 @@ function AlertsPage({ alerts, forecast, loading }) {
     );
   }
 
+  // This filter out duplicate alerts by their headline.
+  const uniqueAlerts = alerts.filter((alert, index, self) =>
+    index === self.findIndex((a) => (
+      a.headline === alert.headline
+    ))
+  );
+
   return (
     <div className="content-wrapper">
       <div className="page-container">
@@ -20,7 +27,7 @@ function AlertsPage({ alerts, forecast, loading }) {
         <div className="forecast-container">
           {forecast && forecast.forecastday.map((day) => (
             <div key={day.date_epoch} className="forecast-day">
-              <h4>{new Date(day.date).toLocaleDateString('en-GB', { weekday: 'short' })}</h4>
+              <h4>{new Date(day.date).toLocaleString('en-GB', { weekday: 'short' })}</h4>
               <img src={day.day.condition.icon} alt={day.day.condition.text} />
               <p>{day.day.maxtemp_c}°C</p>
               <p className="min-temp">{day.day.mintemp_c}°C</p>
@@ -32,11 +39,13 @@ function AlertsPage({ alerts, forecast, loading }) {
 
         <h2>Live UK Disaster Alerts</h2>
         <div id="alerts-feed">
-          {alerts.length > 0 ? (
-            alerts.map((alert, index) => (
+          {uniqueAlerts.length > 0 ? (
+            uniqueAlerts.map((alert, index) => (
               <div key={index} className="alert-item">
-                <h3>⚠️ {alert.event}</h3>
-                <p className="alert-date"><strong>Effective:</strong> {new Date(alert.effective).toLocaleString('en-GB')}</p>
+                <h3>⚠️ {alert.event || alert.headline}</h3>
+                {alert.effective && (
+                  <p className="alert-date"><strong>Effective:</strong> {new Date(alert.effective).toLocaleString('en-GB')}</p>
+                )}
                 <p><strong>Areas:</strong> {alert.areas}</p>
                 <p>{alert.desc}</p>
               </div>
