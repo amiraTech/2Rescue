@@ -10,10 +10,10 @@ function AlertsPage({ alerts, forecast, loading }) {
     );
   }
 
-  // This filter out duplicate alerts by their headline.
+  // This filter out duplicate alerts by their event
   const uniqueAlerts = alerts.filter((alert, index, self) =>
     index === self.findIndex((a) => (
-      a.headline === alert.headline
+      a.event === alert.event
     ))
   );
 
