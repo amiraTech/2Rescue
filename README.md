@@ -12,7 +12,7 @@
 
 During emergencies, access to accurate and timely information can save lives. 2Rescue is a proof-of-concept application that helps individuals:
 
-* **View Live Weather & Alerts:** Fetches and displays a 5-day weather forecast and real-time UK disaster alerts from a live API.
+* **View Live Weather & Alerts:** Fetches and displays a 3-day weather forecast and real-time UK disaster alerts from a live API.
 * **Request Assistance:** Submit a help request form with user details directly to a cloud database.
 * **Find Help & Resources:** Access a curated list of national charities and official UK guidance for crisis situations.
 * **Access Emergency Contacts:** Quickly find a static list of critical UK emergency numbers.
@@ -37,7 +37,7 @@ The application leverages **Firebase's Cloud Firestore** to provide a serverless
 
 ## 🔑 Key Features
 
-* **Dynamic Weather & Alerts Page:** The alerts page is powered by the WeatherAPI.com Forecast API. It displays a 5-day weather forecast for London and shows any active national disaster alerts if they are present in the API response.
+* **Dynamic Weather & Alerts Page:** The alerts page is powered by the WeatherAPI.com Forecast API. It displays a 3-day weather forecast for London and shows any active national disaster alerts if they are present in the API response.
 * **Cloud-Connected Request Form:** The "Request Help" form uses controlled components in React. On submission, the data is sent to a `requests` collection in a Cloud Firestore database, including a server timestamp.
 * **Dynamic Homepage Banner:** The homepage features a banner that only appears if the live API is reporting active disaster alerts, providing immediate notice of critical events.
 * **Responsive UI:** Styled with pure CSS and a Flexbox-based layout for a clean and responsive experience on both desktop and mobile devices.
