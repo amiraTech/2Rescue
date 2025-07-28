@@ -23,7 +23,7 @@ function AlertsPage({ alerts, forecast, loading }) {
         <h1>London Weather & Alerts</h1>
         <p>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank" rel="noopener noreferrer">WeatherAPI.com</a></p>
 
-        <h2>5-Day Forecast</h2>
+        <h2>3-Day Forecast</h2>
         <div className="forecast-container">
           {forecast && forecast.forecastday.map((day) => (
             <div key={day.date_epoch} className="forecast-day">

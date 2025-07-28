@@ -24,7 +24,7 @@ function App() {
     }
 
     const fetchData = async () => {
-      // The URL show the 5-day weather forecast
+      // The URL show the 3-day weather forecast
       const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=London&days=5&aqi=no&alerts=yes`;
       
       try {
