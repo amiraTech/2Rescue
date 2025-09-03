@@ -1,6 +1,6 @@
 # 🌐 2Rescue: Disaster Relief Web App
 
-2Rescue is a dynamic, cloud-hosted web application built with React, designed to provide fast and accessible disaster relief resources for communities in the UK.
+2Rescue is a cloud-hosted web application built with React, designed to provide fast and accessible disaster relief resources for communities in the UK. 
 
 **Live Site:** [https://rescue-6250b.web.app/](https://rescue-6250b.web.app/)
 
@@ -37,9 +37,9 @@ The application leverages **Firebase's Cloud Firestore** to provide a serverless
 
 ## 🔑 Key Features
 
-* **Dynamic Weather & Alerts Page:** The alerts page is powered by the WeatherAPI.com Forecast API. It displays a 3-day weather forecast for London and shows any active national disaster alerts if they are present in the API response.
-* **Cloud-Connected Request Form:** The "Request Help" form uses controlled components in React. On submission, the data is sent to a `requests` collection in a Cloud Firestore database, including a server timestamp.
-* **Dynamic Homepage Banner:** The homepage features a banner that only appears if the live API is reporting active disaster alerts, providing immediate notice of critical events.
-* **Responsive UI:** Styled with pure CSS and a Flexbox-based layout for a clean and responsive experience on both desktop and mobile devices.
+* **A Weather & Alerts Page:** The alerts page is powered by the WeatherAPI.com Forecast API. It displays a 3-day weather forecast for London and shows any active national disaster alerts if they are present in the API response.
+* **A Cloud-Connected Request Form:** The "Request Help" form uses controlled components in React. On submission, the data is sent to a `requests` collection in a Cloud Firestore database, including a server timestamp.
+* **A Homepage Banner:** The homepage features a banner that only appears if the live API is reporting active disaster alerts, providing immediate notice of critical events.
+* **A Responsive UI:** Styled with pure CSS and a Flexbox-based layout for a clean and responsive experience on both desktop and mobile devices.
 
 ```
